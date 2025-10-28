@@ -1,6 +1,12 @@
+from MyProject.Pipeline.stage01 import dataIngestionPipeline 
 from MyProject.logging import logger
-logger.info("Starting the main application")
-# def main():
-#     logger.info("Main function is running")
-#     # Your main application logic here
-#     pass
+
+STAGE_NAME = "Data Ingestion Stage"
+try:
+    logger.info(f">>>>>> Stage {STAGE_NAME} started <<<<<<")
+    data_ingestion_pipeline = dataIngestionPipeline()
+    data_ingestion_pipeline.main()
+    logger.info(f">>>>>> Stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(f"Error occurred in stage {STAGE_NAME}: {e}")
+    raise e
