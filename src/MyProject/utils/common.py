@@ -35,3 +35,6 @@ def get_size(path: Union[str, Path]) -> str:
     path = Path(path)
     size_in_kb = round(os.path.getsize(path)/1024)
     return f"{size_in_kb} KB"
+
+
+    

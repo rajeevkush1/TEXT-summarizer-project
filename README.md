@@ -1,8 +1,8 @@
 # TEXT-summarizer-project
 
 
-1. update config.yaml
-2 update params
+update config.yaml
+update params
 update entity
 update configuration manager in src config 
 update the components
